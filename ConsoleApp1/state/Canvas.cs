@@ -3,20 +3,20 @@
 public class Canvas
 {
     //composition
-    private readonly ITool _currentToolType;
+    private readonly ITool _currentTool;
 
-    public Canvas(ITool currentToolType)
+    public Canvas(ITool currentTool)
     {
-        _currentToolType = currentToolType;
+        _currentTool = currentTool;
     }
 
     public void MouseUp()
     {
-        _currentToolType.MouseUp();
+        _currentTool.MouseUp();
     }
 
     public void MouseDown()
     {
-        _currentToolType.MouseDown();
+        _currentTool.MouseDown();
     }
 }
