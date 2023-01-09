@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="memento\Exercise\" />
+    <Folder Include="template\" />
   </ItemGroup>
 
 </Project>
