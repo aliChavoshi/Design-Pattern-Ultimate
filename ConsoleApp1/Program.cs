@@ -1,9 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
-using ConsoleApp1.iterator;
-using ConsoleApp1.strategy;
-using ConsoleApp1.template;
+using ConsoleApp1.command;
 
-var task = new TransferMoneyTask();
-task.Execute();
+var compositionCommand = new CompositionCommand();
+compositionCommand.Add(new BlackAndWhiteCommand());
+compositionCommand.Add(new ResizeCommand());
+compositionCommand.Execute();
