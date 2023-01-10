@@ -2,8 +2,21 @@
 
 
 using ConsoleApp1.command;
+using ConsoleApp1.command.undoable;
 
-var compositionCommand = new CompositionCommand();
-compositionCommand.Add(new BlackAndWhiteCommand());
-compositionCommand.Add(new ResizeCommand());
-compositionCommand.Execute();
+var history = new History();
+var document = new HtmlDocument
+{
+    Content = "Hello World"
+};
+var boldCommand = new BoldCommand(history, document);
+boldCommand.Execute(); //bold 
+
+var italicCommand = new ItalicCommand(history, document);
+italicCommand.Execute(); //italic
+
+var undoCommand = new UndoCommand(history);
+undoCommand.Execute(); //bold
+undoCommand.Execute(); //default
+
+Console.WriteLine(document.Content); //default
