@@ -2,8 +2,15 @@
 
 public class SpreadSheet : IObserver
 {
-    public void Update(string value)
+    private readonly DataSource _dataSource;
+
+    public SpreadSheet(DataSource dataSource)
     {
-        Console.WriteLine($"spread sheet updated {value}");
+        _dataSource = dataSource;
+    }
+
+    public void Update()
+    {
+        Console.WriteLine($"spread sheet updated {_dataSource.Value}");
     }
 }

@@ -2,10 +2,15 @@
 
 public class Chart : IObserver
 {
+    private readonly DataSource _dataSource;
 
-    public void Update(string value)
+    public Chart(DataSource dataSource)
     {
-        Console.WriteLine($"chart updated {value}");
+        _dataSource = dataSource;
+    }
 
+    public void Update()
+    {
+        Console.WriteLine($"chart updated {_dataSource.Value}");
     }
 }
