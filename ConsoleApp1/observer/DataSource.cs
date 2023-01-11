@@ -10,7 +10,7 @@ public class DataSource : Subject
         set
         {
             _value = value;
-            NotifyObservers();
+            NotifyObservers(_value);
         }
     }
 }

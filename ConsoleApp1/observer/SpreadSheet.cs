@@ -2,8 +2,8 @@
 
 public class SpreadSheet : IObserver
 {
-    public void Update()
+    public void Update(string value)
     {
-        Console.WriteLine("spread sheet updated...");
+        Console.WriteLine($"spread sheet updated {value}");
     }
 }

@@ -14,9 +14,9 @@ public class Subject
         _observers.Remove(observer);
     }
 
-    public void NotifyObservers()
+    public void NotifyObservers(string value)
     {
         foreach (var observer in _observers)
-            observer.Update();
+            observer.Update(value);
     }
 }

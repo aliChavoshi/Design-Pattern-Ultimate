@@ -2,8 +2,10 @@
 
 public class Chart : IObserver
 {
-    public void Update()
+
+    public void Update(string value)
     {
-        Console.WriteLine("chart updated...");
+        Console.WriteLine($"chart updated {value}");
+
     }
 }

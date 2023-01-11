@@ -2,5 +2,5 @@
 
 public interface IObserver
 {
-    void Update();
+    void Update(string value);
 }
