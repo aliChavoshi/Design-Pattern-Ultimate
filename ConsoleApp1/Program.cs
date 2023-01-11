@@ -1,22 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+using ConsoleApp1.observer;
 
+var dataSource = new DataSource();
+//observer
+var spreadSheet = new SpreadSheet();
+var chart = new Chart();
+//attach observer for updating
+dataSource.Attach(spreadSheet);
+dataSource.Attach(chart);
 
-using ConsoleApp1.command;
-using ConsoleApp1.command.undoable;
-
-var history = new History();
-var document = new HtmlDocument
-{
-    Content = "Hello World"
-};
-var boldCommand = new BoldCommand(history, document);
-boldCommand.Execute(); //bold 
-
-var italicCommand = new ItalicCommand(history, document);
-italicCommand.Execute(); //italic
-
-var undoCommand = new UndoCommand(history);
-undoCommand.Execute(); //bold
-undoCommand.Execute(); //default
-
-Console.WriteLine(document.Content); //default
+dataSource.Value = "A";
+dataSource.Value = "B";
