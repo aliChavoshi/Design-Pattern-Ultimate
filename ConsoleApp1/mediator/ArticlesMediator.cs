@@ -1,12 +1,12 @@
 ﻿namespace ConsoleApp1.mediator;
 
-public class ArticlesDialogBox : DialogBox
+public class ArticlesMediator : Mediator
 {
     private readonly ListBox _listBox;
     private readonly TextBox _textBox;
     private readonly Button _button;
 
-    public ArticlesDialogBox()
+    public ArticlesMediator()
     {
         _textBox = new TextBox(this);
         _listBox = new ListBox(this);

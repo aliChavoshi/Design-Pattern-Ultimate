@@ -14,7 +14,7 @@ public class ListBox : UiControl
         }
     }
 
-    public ListBox(DialogBox owner) : base(owner)
+    public ListBox(Mediator owner) : base(owner)
     {
     }
 }

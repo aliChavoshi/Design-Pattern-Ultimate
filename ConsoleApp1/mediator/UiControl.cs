@@ -2,9 +2,9 @@
 
 public class UiControl
 {
-    protected readonly DialogBox Owner;
+    protected readonly Mediator Owner;
 
-    public UiControl(DialogBox owner)
+    public UiControl(Mediator owner)
     {
         Owner = owner;
     }

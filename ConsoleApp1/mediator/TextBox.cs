@@ -14,7 +14,7 @@ public class TextBox : UiControl
         }
     }
 
-    public TextBox(DialogBox owner) : base(owner)
+    public TextBox(Mediator owner) : base(owner)
     {
     }
 }

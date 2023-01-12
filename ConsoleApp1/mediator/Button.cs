@@ -14,7 +14,7 @@ public class Button : UiControl
         }
     }
 
-    public Button(DialogBox owner) : base(owner)
+    public Button(Mediator owner) : base(owner)
     {
     }
 }

@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="memento\Exercise\" />
-    <Folder Include="mediator\" />
     <Folder Include="observer\" />
     <Folder Include="template\" />
   </ItemGroup>
