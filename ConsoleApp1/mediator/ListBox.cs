@@ -10,11 +10,7 @@ public class ListBox : UiControl
         set
         {
             _selection = value;
-            Owner.Changed(this);
+            NotifyObservers();
         }
-    }
-
-    public ListBox(Mediator owner) : base(owner)
-    {
     }
 }

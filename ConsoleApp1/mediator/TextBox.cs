@@ -10,11 +10,7 @@ public class TextBox : UiControl
         set
         {
             _content = value;
-            Owner.Changed(this);
+            NotifyObservers();
         }
-    }
-
-    public TextBox(Mediator owner) : base(owner)
-    {
     }
 }

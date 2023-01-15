@@ -10,11 +10,7 @@ public class Button : UiControl
         set
         {
             _isEnabled = value;
-            Owner.Changed(this);
+            NotifyObservers();
         }
-    }
-
-    public Button(Mediator owner) : base(owner)
-    {
     }
 }

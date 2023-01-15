@@ -1,38 +1,41 @@
 ﻿namespace ConsoleApp1.mediator;
 
-public class ArticlesMediator : Mediator
+public class ArticlesMediator
 {
-    private readonly ListBox _listBox;
-    private readonly TextBox _textBox;
-    private readonly Button _button;
+    private static readonly TextBox TextBox = new();
+    private static readonly Button Button = new();
+    private static readonly ListBox ListBox = new();
 
     public ArticlesMediator()
     {
-        _textBox = new TextBox(this);
-        _listBox = new ListBox(this);
-        _button = new Button(this);
+        ListBox.Attach(new ArticleSelect());
+        TextBox.Attach(new TitleChanged());
     }
 
     public void Initial()
     {
-        _listBox.Selection = "Text One";
-        _textBox.Content = "";
-        Console.WriteLine("text box:" + _textBox.Content);
-        Console.WriteLine("button:" + _button.IsEnabled);
+        ListBox.Selection = "A";
+        TextBox.Content = "";
+        Console.WriteLine(TextBox.Content);
+        Console.WriteLine(Button.IsEnabled);
     }
 
-    public override void Changed(UiControl control)
+    private class ArticleSelect : IEventHandler
     {
-        if (control == _listBox)
+        public void Update()
         {
-            _textBox.Content = _listBox.Selection;
-            _button.IsEnabled = true;
+            TextBox.Content = ListBox.Selection;
+            Button.IsEnabled = true;
         }
-        else if (control == _textBox)
+    }
+
+    private class TitleChanged : IEventHandler
+    {
+        public void Update()
         {
-            var content = _textBox.Content;
-            var isEmpty = string.IsNullOrEmpty(content);
-            _button.IsEnabled = !isEmpty;
+            Button.IsEnabled = true;
+            if (string.IsNullOrEmpty(TextBox.Content))
+                Button.IsEnabled = false;
         }
     }
 }

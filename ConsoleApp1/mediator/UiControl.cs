@@ -1,11 +1,22 @@
 ﻿namespace ConsoleApp1.mediator;
 
-public class UiControl
+public abstract class UiControl
 {
-    protected readonly Mediator Owner;
+    private readonly List<IEventHandler> _eventHandlers = new();
 
-    public UiControl(Mediator owner)
+    public void Attach(IEventHandler eventHandler)
     {
-        Owner = owner;
+        _eventHandlers.Add(eventHandler);
+    }
+
+    public void Detach(IEventHandler eventHandler)
+    {
+        _eventHandlers.Remove(eventHandler);
+    }
+
+    protected void NotifyObservers()
+    {
+        foreach (var handler in _eventHandlers)
+            handler.Update();
     }
 }
