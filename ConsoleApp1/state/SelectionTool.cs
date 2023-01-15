@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.state;
+﻿namespace DesignPatterns.state;
 
 public class SelectionTool : ITool
 {

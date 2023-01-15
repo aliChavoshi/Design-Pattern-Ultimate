@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.template;
+﻿namespace DesignPatterns.template;
 
 public class GenerateReportTask : Task
 {

@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.memento;
+﻿namespace DesignPatterns.memento;
 
 public class Editor
 {

@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.command;
+﻿namespace DesignPatterns.command;
 
 public class DeleteCustomerCommand : ICommand
 {

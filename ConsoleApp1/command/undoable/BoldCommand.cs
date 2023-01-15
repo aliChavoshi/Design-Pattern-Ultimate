@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.command.undoable;
+﻿namespace DesignPatterns.command.undoable;
 
 public class BoldCommand : IUndoAbleCommand
 {

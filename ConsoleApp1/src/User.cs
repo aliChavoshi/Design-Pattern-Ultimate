@@ -1,3 +1,3 @@
-﻿namespace ConsoleApp1;
+﻿namespace DesignPatterns;
 
 public record User(string FirstName);

@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.observer;
+﻿namespace DesignPatterns.observer;
 
 public class Chart : IObserver
 {

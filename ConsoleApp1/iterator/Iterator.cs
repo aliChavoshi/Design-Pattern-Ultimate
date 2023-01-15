@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.iterator;
+﻿namespace DesignPatterns.iterator;
 
 public abstract class Iterator<T>
 {

@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.Draw;
+﻿namespace DesignPatterns.Draw;
 
 public class Checkbox : UiControl
 {

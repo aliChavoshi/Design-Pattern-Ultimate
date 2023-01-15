@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1;
+﻿namespace DesignPatterns;
 
 public class Account
 {

@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.memento.Exercise;
+﻿namespace DesignPatterns.memento.Exercise;
 
 public class DocumentHistory
 {

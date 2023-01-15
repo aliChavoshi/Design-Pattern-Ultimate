@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.chainOfResponsibility;
+﻿namespace DesignPatterns.chainOfResponsibility;
 
 public abstract class Handler
 {

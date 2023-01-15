@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.Tax;
+﻿namespace DesignPatterns.Tax;
 
 public interface ITaxCalculator
 {

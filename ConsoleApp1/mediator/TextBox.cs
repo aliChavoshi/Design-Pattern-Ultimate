@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.mediator;
+﻿namespace DesignPatterns.mediator;
 
 public class TextBox : UiControl
 {

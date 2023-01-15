@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.strategy;
+﻿namespace DesignPatterns.strategy;
 
 public interface IFilter
 {
