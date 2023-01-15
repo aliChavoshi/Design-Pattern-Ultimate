@@ -1,7 +1,4 @@
-﻿
-using ConsoleApp1.mediator;
-using ConsoleApp1.observer;
+﻿using ConsoleApp1.chainOfResponsibility;
 
-var dialog = new ArticlesMediator();
-dialog.Initial();
-    
+var webServer = new WebServer(new Authenticator(new Logger(new Compressor(null))));
+webServer.Handle(new HttpRequest("admin", "1234"));
