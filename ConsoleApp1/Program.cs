@@ -1,4 +1,7 @@
 ﻿using DesignPatterns.chainOfResponsibility;
+using DesignPatterns.visitor;
 
-var webServer = new WebServer(new Authenticator(new Logger(new Compressor(null))));
-webServer.Handle(new HttpRequest("admin", "1234"));
+var document = new HtmlDocument();
+document.Add(new AnchorNode());
+document.Add(new HeadingNode());
+document.Highlight();
