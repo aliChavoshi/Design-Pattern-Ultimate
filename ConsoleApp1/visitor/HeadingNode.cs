@@ -2,8 +2,8 @@
 
 public class HeadingNode : IHtmlNode
 {
-    public void Highlight()
+    public void Execute(IOperation operation)
     {
-        Console.WriteLine("heading highlight");
+        operation.Apply(this);
     }
 }

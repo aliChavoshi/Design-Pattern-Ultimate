@@ -1,7 +1,7 @@
-﻿using DesignPatterns.chainOfResponsibility;
-using DesignPatterns.visitor;
+﻿using DesignPatterns.visitor;
 
 var document = new HtmlDocument();
 document.Add(new AnchorNode());
 document.Add(new HeadingNode());
-document.Highlight();
+document.Highlight(new HighlightOperation());
+document.Highlight(new PLainTextOperation());

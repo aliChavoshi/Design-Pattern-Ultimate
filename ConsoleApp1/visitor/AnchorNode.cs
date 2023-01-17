@@ -2,8 +2,8 @@
 
 public class AnchorNode : IHtmlNode
 {
-    public void Highlight()
+    public void Execute(IOperation operation)
     {
-        Console.WriteLine("anchor highlight");
+        operation.Apply(this);
     }
 }

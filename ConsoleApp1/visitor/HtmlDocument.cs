@@ -9,11 +9,8 @@ public class HtmlDocument
         _nodes.Add(node);
     }
 
-    public void Highlight()
+    public void Highlight(IOperation operation)
     {
-        foreach (var node in _nodes)
-        {
-            node.Highlight();
-        }
+        foreach (var node in _nodes) node.Execute(operation);
     }
 }
